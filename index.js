@@ -12,7 +12,7 @@ function computerPlay() {
 
 //Variables
 const computerSelection = computerPlay();
-const playerSelection = prompt('Choose Rock, Paper, or Scissors');
+const playerSelection = prompt('Choose Rock, Paper, or Scissors'); // potential problem in future, might need to turn this into a array to have the player select.
 var playerAnswer = capitalize(playerSelection);
 
 
@@ -31,15 +31,16 @@ console.log(capitalize(playerSelection));
 
 //plays one round of the game
 function playRound(playerAnswer, computerSelection) {
-    if (playerAnswer ===  "Rock") {
+    if (playerAnswer ===  computerSelection) {
         console.log("It's a tie! Go again!");
-    } else {
-        console.log("something");
+    } else if {
+        console.log("something");  //nest a function in here to compare 'rock', 'paper', and 'scissors' with their winning parameters
     }
     
   
-}
-playRound();
+};
+
+playRound(playerAnswer, computerSelection);
 
  
 
