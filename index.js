@@ -33,8 +33,8 @@ console.log(capitalize(playerSelection));
 function playRound(playerAnswer, computerSelection) {
     if (playerAnswer ===  computerSelection) {
         console.log("It's a tie! Go again!");
-    } else if {
-        console.log("something");  //nest a function in here to compare 'rock', 'paper', and 'scissors' with their winning parameters
+    } else {
+        console.log("something");  
     }
     
   
