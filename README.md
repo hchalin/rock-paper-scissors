@@ -10,3 +10,6 @@ commit 2:
     playRound();
     -->
     playRound(playerAnswer, computerSelection);
+
+comit 3: 
+    Finished the playRound() function and it accurately decides who wins the round.
