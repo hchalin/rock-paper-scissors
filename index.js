@@ -44,14 +44,3 @@ playRound(playerAnswer, computerSelection);
 
  
 
-
-/*  Write a function that plays a single round of the game.
-    The funtion should take 2 Parameters, "playerSelection", and "computerSelection"
-    It should return a string that declares the winner of the round
-    "You Lose, Rock beats Scissors!"
-    Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).
-
-        function capitalize(string) {
-            return string.charAt(0).toUpperCase() + string.splice(1);
-        }
-*/
