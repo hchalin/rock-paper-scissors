@@ -23,21 +23,33 @@ function capitalize(string) {
 console.log(capitalize("You: " + playerSelection));
 
 //plays one round of the game
+var i = 0;
+/*while (i < 5){
+    
+    playRound(playerAnswer, computerSelection);
+    console.log('You have ' + i  + ' points.');   
+}
+*/
+
+do {
+    playRound(playerAnswer, computerSelection);
+    console.log(i);
+} while (i<5);
 function playRound(playerAnswer, computerSelection){
     if (playerAnswer === computerSelection) {
-        console.log("It's a tie! Go again!")
+        return "It's a tie! Go again! You have " + i + " points.";
     } else if (playerAnswer === "Rock" && computerSelection === "Scissors") {
-        console.log('Nice! You won!')
+        return 'Nice! You won! You have ' + i++ + ' points';
     } else if (playerAnswer === "Paper" && computerSelection === "Rock") {
-        console.log('Nice! You won!')
+        return 'Nice! Yofu won! You have ' + i++ + ' points'
     } else if (playerAnswer === "Scissors" && computerSelection === "Paper") {
-        console.log('Nice! You won!')
+        return 'Nice! You won! You have ' + i++ + ' points'
     } else {
-        console.log('You lost');
-    };
+        return 'You lost this round.  You have ' +  i-- + ' points.';
+    };   
 };
 
-playRound(playerAnswer, computerSelection);
+
 
 
 
