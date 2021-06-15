@@ -1,5 +1,9 @@
 //              Rock Paper Scissors Project
 
+//Variables
+const computerSelection = computerPlay();
+const playerSelection = prompt('Choose Rock, Paper, or Scissors'); 
+var playerAnswer = capitalize(playerSelection);
 
 //Returns a random answer for the computer
 function computerPlay() {
@@ -9,10 +13,6 @@ function computerPlay() {
     return answer;
 }
 
-//Variables
-const computerSelection = computerPlay();
-const playerSelection = prompt('Choose Rock, Paper, or Scissors'); 
-var playerAnswer = capitalize(playerSelection);
 
 
 //Capitalizes the Players answer
@@ -34,6 +34,7 @@ var i = 0;
 do {
     playRound(playerAnswer, computerSelection);
     console.log(i);
+
 } while (i<5);
 function playRound(playerAnswer, computerSelection){
     if (playerAnswer === computerSelection) {
@@ -45,7 +46,7 @@ function playRound(playerAnswer, computerSelection){
     } else if (playerAnswer === "Scissors" && computerSelection === "Paper") {
         return 'Nice! You won! You have ' + i++ + ' points'
     } else {
-        return 'You lost this round.  You have ' +  i-- + ' points.';
+        return 'You lost this round.  You have ' +  i++ + ' points.';
     };   
 };
 
