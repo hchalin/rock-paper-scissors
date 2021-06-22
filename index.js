@@ -1,6 +1,13 @@
 //              Rock Paper Scissors Project
 
+
+
+
+ 
 //Variables
+
+var playerScore = 0;
+var computerScore = 0;
 const computerSelection = computerPlay();
 const playerSelection = prompt('Choose Rock, Paper, or Scissors'); 
 var playerAnswer = capitalize(playerSelection);
@@ -13,47 +20,30 @@ function computerPlay() {
     return answer;
 }
 
-
-
 //Capitalizes the Players answer
 function capitalize(string) {
-    string.toLowerCase();
-    return string[0].toUpperCase() + string.toLowerCase().slice(1);
+    return string[0].toUpperCase() + string.slice(1).toLowerCase();
 }
-console.log(capitalize("You: " + playerSelection));
+console.log("You: " + playerAnswer);
 
 //plays one round of the game
-var i = 0;
-/*while (i < 5){
-    
-    playRound(playerAnswer, computerSelection);
-    console.log('You have ' + i  + ' points.');   
-}
-*/
-
-do {
-    playRound(playerAnswer, computerSelection);
-    console.log(i);
-
-} while (i<5);
-function playRound(playerAnswer, computerSelection){
+function playRound(playerAnswer, computerSelection) {
     if (playerAnswer === computerSelection) {
-        return "It's a tie! Go again! You have " + i + " points.";
-    } else if (playerAnswer === "Rock" && computerSelection === "Scissors") {
-        return 'Nice! You won! You have ' + i++ + ' points';
-    } else if (playerAnswer === "Paper" && computerSelection === "Rock") {
-        return 'Nice! Yofu won! You have ' + i++ + ' points'
-    } else if (playerAnswer === "Scissors" && computerSelection === "Paper") {
-        return 'Nice! You won! You have ' + i++ + ' points'
-    } else {
-        return 'You lost this round.  You have ' +  i++ + ' points.';
-    };   
+        console.log('Its a tie');
+    } else if (
+        playerAnswer === "Rock" && computerSelection === "Scissors" ||
+        playerAnswer === "Paper" && computerSelection === "Rock" ||
+        playerAnswer === "Scissors" && computerSelection === "Paper"
+    ) {
+        console.log("You gained a point")
+    } else if (
+        playerAnswer === "Rock" && computerSelection === "Paper" ||
+        playerAnswer === "Paper" && computerSelection === "Scissors" ||
+        playerAnswer === "Scissors" && computerSelection === "Rock"
+    ) {
+        console.log("Computer gained a point!");
+    } else (
+        console.log("Check your spelling.")
+    )
 };
-
-
-
-
-
-
- 
-
+playRound(playerAnswer, computerSelection)
