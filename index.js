@@ -1,8 +1,6 @@
 //              Rock Paper Scissors Project
 
 
-
-
  
 //Variables
 
@@ -29,21 +27,26 @@ console.log("You: " + playerAnswer);
 //plays one round of the game
 function playRound(playerAnswer, computerSelection) {
     if (playerAnswer === computerSelection) {
-        console.log('Its a tie');
+        return "It's a tie!";
     } else if (
         playerAnswer === "Rock" && computerSelection === "Scissors" ||
         playerAnswer === "Paper" && computerSelection === "Rock" ||
         playerAnswer === "Scissors" && computerSelection === "Paper"
     ) {
-        console.log("You gained a point")
+        console.log("You gained a point");
+        playerScore++;
     } else if (
         playerAnswer === "Rock" && computerSelection === "Paper" ||
         playerAnswer === "Paper" && computerSelection === "Scissors" ||
         playerAnswer === "Scissors" && computerSelection === "Rock"
     ) {
         console.log("Computer gained a point!");
+        computerScore++; 
     } else (
         console.log("Check your spelling.")
     )
 };
 playRound(playerAnswer, computerSelection)
+console.log("You have " + playerScore + " points. The computer has " + computerScore + " points.");
+
+//create a function called game() that will loop through the playRound() function up to 5 and keep track of the score.
