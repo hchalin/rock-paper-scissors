@@ -50,3 +50,9 @@ playRound(playerAnswer, computerSelection)
 console.log("You have " + playerScore + " points. The computer has " + computerScore + " points.");
 
 //create a function called game() that will loop through the playRound() function up to 5 and keep track of the score.
+
+function game() {
+    for (i=0, i <= 5, i++) {
+        
+    };
+}

@@ -13,3 +13,6 @@ commit 2:
 
 commit 3: 
     Finished the playRound() function and it accurately decides who wins the round
+
+
+changes on mac!
