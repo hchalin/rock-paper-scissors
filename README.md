@@ -15,4 +15,7 @@ commit 3:
     Finished the playRound() function and it accurately decides who wins the round
 
 
-changes on mac!
+commit 4: 
+    Everything works.  Now I just need to make the "Go Again" Btn call the play round funtion.  Everytime you refresh the page it just rests all the code and restores all the variables to their original values... ie not storing them.  Once i impliment the button i can set a maximum score to end the game once a certain score is reached...
+
+    Linked the button to the function but all the variables are chosen once and stay the same until the page refreshes.  Need to make the button call the playRound() funtion and call for new variables...  one possible solution is to place all the called variable inside the playRound() funtion and nest other funtions within accordingly.

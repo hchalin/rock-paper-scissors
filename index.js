@@ -18,6 +18,8 @@ function computerPlay() {
     return answer;
 }
 
+
+
 //Capitalizes the Players answer
 function capitalize(string) {
     return string[0].toUpperCase() + string.slice(1).toLowerCase();
@@ -35,6 +37,7 @@ function playRound(playerAnswer, computerSelection) {
     ) {
         console.log("You gained a point");
         playerScore++;
+        return playerScore;
     } else if (
         playerAnswer === "Rock" && computerSelection === "Paper" ||
         playerAnswer === "Paper" && computerSelection === "Scissors" ||
@@ -51,8 +54,12 @@ console.log("You have " + playerScore + " points. The computer has " + computerS
 
 //create a function called game() that will loop through the playRound() function up to 5 and keep track of the score.
 
-function game() {
-    for (i=0, i <= 5, i++) {
-        
-    };
+function end(playerScore) {
+    if (playerScore == 5) {
+        console.log("you win");
+    } else if (computerScore == 5) {
+        console.log("You lose");
+    }
 }
+end(playerScore);
+console.log(playerScore);
