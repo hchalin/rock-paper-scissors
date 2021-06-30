@@ -36,15 +36,15 @@ function playRound(playerAnswer, computerSelection) {
         playerAnswer === "Scissors" && computerSelection === "Paper"
     ) {
         console.log("You gained a point");
-        playerScore++;
-        return playerScore;
+        return playerScore++;
+        
     } else if (
         playerAnswer === "Rock" && computerSelection === "Paper" ||
         playerAnswer === "Paper" && computerSelection === "Scissors" ||
         playerAnswer === "Scissors" && computerSelection === "Rock"
     ) {
         console.log("Computer gained a point!");
-        computerScore++; 
+        return computerScore++; 
     } else (
         console.log("Check your spelling.")
     )
@@ -54,12 +54,23 @@ console.log("You have " + playerScore + " points. The computer has " + computerS
 
 //create a function called game() that will loop through the playRound() function up to 5 and keep track of the score.
 
-function end(playerScore) {
-    if (playerScore == 5) {
-        console.log("you win");
-    } else if (computerScore == 5) {
-        console.log("You lose");
-    }
+function game() {
+    playRound(playerAnswer, computerSelection);
+    computerPlay();
+    playerSelection();
 }
-end(playerScore);
-console.log(playerScore);
+
+
+//make one function that calls the player & computer to select a answer, decide between the two who won and add points accordingly.
+
+function game(){
+    //computer select a answer 
+    const computerSelection = computerPlay();
+    //player select a answer 
+    const playerSelection = prompt('Choose Rock, Paper, or Scissors'); 
+    computerPlay()
+
+    //decide who won 
+    //add Points to who won
+    //when either the computer or player has five declare a winner
+}
