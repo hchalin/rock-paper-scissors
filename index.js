@@ -1,7 +1,7 @@
 //              Rock Paper Scissors Project
 
 //Variables
-let round = 0;
+let round = 1;
 var playerScore = 0;
 var computerScore = 0;
 //const computerSelection = computerPlay();
@@ -12,7 +12,6 @@ var computerScore = 0;
 function computerPlay() {
     const answers = ["Rock", "Paper", "Scissors"];   
     const answer = answers[Math.floor(Math.random() * answers.length)];
-    console.log("Computer: " + answer);
     return answer;
 }
 
@@ -26,11 +25,12 @@ var playerAnswer = capitalize(playerSelection);
 function capitalize(string) {
     return string[0].toUpperCase() + string.slice(1).toLowerCase();
 }
-console.log("You: " + playerAnswer);
+console.log("You: " + playerAnswer + "     Computer: " + computerSelection);
 
     //decide who won 
     function playRound(playerAnswer, computerSelection) {
         if (playerAnswer === computerSelection) {
+            console.log("It's a tie! Go again.")
             return "It's a tie!";
         } else if (
             playerAnswer === "Rock" && computerSelection === "Scissors" ||
@@ -54,22 +54,24 @@ console.log("You: " + playerAnswer);
     };
     // play the round 
     playRound(playerAnswer, computerSelection);
-    console.log("You: " + playerScore);
-    console.log("Computer: " + computerScore);
-    console.log("Round: " + round);
+    console.log("Computer: " + computerScore + "        You: " + playerScore + "     Round: " + round);
     round++;
-    end(round);
+    end();
 
 function end(round, playerScore, computerScore){
-    if (round === 5 && playerScore > computerScore){
+    if (round === 5){
         console.log("You won")
     } else if (
-        round === 5 && playerScore < computerScore
+        round === 5
     ) {
         console.log('You lost')
     } else {
         return;
     }
 }
+end()
 
 }
+
+
+
