@@ -22,12 +22,10 @@ const computerSelection = computerPlay();
 const playerSelection = prompt('Choose Rock, Paper, or Scissors'); 
 var playerAnswer = capitalize(playerSelection);
 // capitalize the players answer
-function capitalize(string) {
-    return string[0].toUpperCase() + string.slice(1).toLowerCase();
-}
-console.log("You: " + playerAnswer + "     Computer: " + computerSelection);
-
-    //decide who won 
+    function capitalize(string) {
+        return string[0].toUpperCase() + string.slice(1).toLowerCase();
+    }
+    //plays a round and decides who won 
     function playRound(playerAnswer, computerSelection) {
         if (playerAnswer === computerSelection) {
             console.log("It's a tie! Go again.")
@@ -42,36 +40,32 @@ console.log("You: " + playerAnswer + "     Computer: " + computerSelection);
             
         } else if (
             playerAnswer === "Rock" && computerSelection === "Paper" ||
-            playerAnswer === "Paper" && computerSelection === "Scissors" ||
+            playerAnswer === "Paper" && computerSelection === "Scissors"  ||
             playerAnswer === "Scissors" && computerSelection === "Rock"
         ) {
             console.log("Computer gained a point!");
-            return computerScore++; 
+            return computerScore++;
         } else (
             console.log("Check your spelling.")
         )
-    
+           
     };
+    console.log("You: " + playerAnswer + "     Computer: " + computerSelection);
     // play the round 
     playRound(playerAnswer, computerSelection);
     console.log("Computer: " + computerScore + "        You: " + playerScore + "     Round: " + round);
     round++;
-    end();
-
-function end(round, playerScore, computerScore){
-    if (round === 5){
-        console.log("You won")
-    } else if (
-        round === 5
-    ) {
-        console.log('You lost')
-    } else {
-        return;
+    
+    function end(round){
+        if (round == 5 && playerScore > computerScore){
+            console.log("You won")
+        } else if (
+            round == 5 && playerScore < computerScore
+        ) {
+            console.log('You lost')
+        } else {
+            console.log("something else");
+        }
     }
+end(round);
 }
-end()
-
-}
-
-
-
