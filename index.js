@@ -55,17 +55,22 @@ var playerAnswer = capitalize(playerSelection);
     playRound(playerAnswer, computerSelection);
     console.log("Computer: " + computerScore + "        You: " + playerScore + "     Round: " + round);
     round++;
+  
     
     function end(round, playerScore, computerScore){
-        if (round === 5 && playerScore > computerScore){
+        //console.log(playerScore, computerScore, round);
+        if (round >= 5 && playerScore > computerScore){
             console.log("You won")
         } else if (
-            round === 5 && playerScore < computerScore
+            round >= 5 && playerScore < computerScore
         ) {
             console.log('You lost')
         } else {
-            console.log("something else");
+            return
         }
     }
-end(round);
+end(round, playerScore, computerScore);
+console.log(computerScore, playerScore, round);
+
 }
+
