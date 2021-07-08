@@ -74,3 +74,8 @@ console.log(computerScore, playerScore, round);
 
 }
 
+function reset(computerScore, playerScore, round) {
+    let playerScore = 0;
+    let computerScore = 0;
+    let round = 0;
+}
